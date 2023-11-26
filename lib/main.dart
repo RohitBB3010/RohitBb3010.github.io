@@ -5,6 +5,7 @@ import 'package:portfolio/screens/experience_screen.dart';
 import 'package:portfolio/screens/home_screen.dart';
 import 'package:portfolio/screens/journal_screen.dart';
 import 'package:portfolio/screens/skills_screen.dart';
+import 'package:social_media_flutter/social_media_flutter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -158,6 +159,22 @@ class _MyHomePageState extends State<MyHomePage> {
           if (tabEntry == 3) const SkillsScreen(),
           if (tabEntry == 4) const JournalScreen(),
           if (tabEntry == 5) const ContactScreen(),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              width: MediaQuery.of(context).size.width * 0.5,
+              height: MediaQuery.of(context).size.height * 0.1,
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    SocialWidget(
+                        iconData: Icons.email,
+                        iconColor: Colors.white,
+                        placeholderText: 'GMail',
+                        link: 'https://mail.google.com/mail/u/0/#inbox')
+                  ]),
+            ),
+          ),
         ]),
       ),
     );

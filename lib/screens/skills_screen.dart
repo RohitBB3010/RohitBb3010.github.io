@@ -10,6 +10,8 @@ class SkillsScreen extends StatefulWidget {
 class _SkillsScreenState extends State<SkillsScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container(
+      height: MediaQuery.of(context).size.height * 0.7,
+    );
   }
 }
