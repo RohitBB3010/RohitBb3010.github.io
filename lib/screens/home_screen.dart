@@ -115,7 +115,7 @@ class _HomeScreenState extends State<HomeScreen>
                     child: Container(
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
-                          image: DecorationImage(
+                          image: const DecorationImage(
                               image: AssetImage('assets/Mic.jpg'),
                               fit: BoxFit.cover),
                           borderRadius: BorderRadius.circular(25.0)),

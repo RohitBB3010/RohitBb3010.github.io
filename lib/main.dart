@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_social_button/flutter_social_button.dart';
 import 'package:portfolio/screens/contact_screen.dart';
 import 'package:portfolio/screens/experience_screen.dart';
 import 'package:portfolio/screens/home_screen.dart';
@@ -159,22 +160,6 @@ class _MyHomePageState extends State<MyHomePage> {
           if (tabEntry == 3) const SkillsScreen(),
           if (tabEntry == 4) const JournalScreen(),
           if (tabEntry == 5) const ContactScreen(),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Container(
-              width: MediaQuery.of(context).size.width * 0.5,
-              height: MediaQuery.of(context).size.height * 0.1,
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    SocialWidget(
-                        iconData: Icons.email,
-                        iconColor: Colors.white,
-                        placeholderText: 'GMail',
-                        link: 'https://mail.google.com/mail/u/0/#inbox')
-                  ]),
-            ),
-          ),
         ]),
       ),
     );
