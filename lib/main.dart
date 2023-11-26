@@ -165,16 +165,34 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // SocialWidget(
-                //     iconData: Icons.email,
-                //     placeholderText: 'Gmail',
-                //     link:
-                //         'https://www.linkedin.com/in/rohit-bhandwalkar-b2708a235/')
-                TextButton(
-                  child: IconIcons.linkedin(),
-                  onPressed: () {
-                    'https://www.linkedin.com/in/rohit-bhandwalkar-b2708a235/';
-                  },
+                Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: InkWell(
+                    onTap: () {
+                      'https://www.linkedin.com/in/rohit-bhandwalkar-b2708a235/';
+                    },
+                    child: Image.asset('assets/linkedin.png'),
+                  ),
+                ),
+                SizedBox(width: MediaQuery.of(context).size.width * 0.05),
+                Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: InkWell(
+                    onTap: () {
+                      'https://github.com/RohitBB3010';
+                    },
+                    child: Image.asset('assets/logo.png'),
+                  ),
+                ),
+                SizedBox(width: MediaQuery.of(context).size.width * 0.05),
+                Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: InkWell(
+                    onTap: () {
+                      'https://www.linkedin.com/in/rohit-bhandwalkar-b2708a235/';
+                    },
+                    child: Image.asset('assets/instagram.png'),
+                  ),
                 )
               ],
             ),
