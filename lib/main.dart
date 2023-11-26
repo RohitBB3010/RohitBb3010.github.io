@@ -36,7 +36,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int tabEntry = 3;
+  int tabEntry = 0;
 
   @override
   Widget build(BuildContext context) {

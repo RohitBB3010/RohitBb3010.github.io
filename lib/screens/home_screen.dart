@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio/components/gradient_box.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -94,8 +95,8 @@ class _HomeScreenState extends State<HomeScreen>
                           'https://drive.google.com/file/d/1Z86am44XEwJF6zeXfZsWZ4TR_wd5OK0F/view?usp=sharing'));
                     },
                     child: Container(
-                      width: MediaQuery.of(context).size.width * 0.1,
-                      height: MediaQuery.of(context).size.height * 0.05,
+                      width: MediaQuery.of(context).size.width * 0.15,
+                      height: MediaQuery.of(context).size.height * 0.07,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(25.0),
                           gradient: const LinearGradient(
@@ -117,12 +118,12 @@ class _HomeScreenState extends State<HomeScreen>
                             Icon(
                               Icons.download,
                               color: Colors.white,
-                              size: 18.0,
+                              size: 25.0,
                             ),
                             AutoSizeText(
                               'Download Resume',
                               style: TextStyle(
-                                fontSize: 10.0,
+                                fontSize: 20.0,
                                 color: Colors.white,
                               ),
                             )
@@ -134,42 +135,47 @@ class _HomeScreenState extends State<HomeScreen>
             ),
           ),
           SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-          AnimatedBuilder(
-              animation: _controller,
-              builder: (context, child) {
-                final value = _controller.value;
-                return Transform.translate(
-                  offset: Offset(0, 10 * value),
-                  child: Container(
-                    width: MediaQuery.of(context).size.width * 0.3,
-                    height: MediaQuery.of(context).size.height * 0.45,
-                    padding: EdgeInsets.all(
-                        MediaQuery.of(context).size.width * 0.01),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25.0),
-                        gradient: const LinearGradient(
-                            colors: [Colors.pink, Colors.blue]),
-                        boxShadow: const [
-                          BoxShadow(
-                              color: Colors.pink,
-                              blurRadius: 20,
-                              offset: Offset(-2, 0)),
-                          BoxShadow(
-                              color: Colors.blue,
-                              blurRadius: 20,
-                              offset: Offset(2, 0))
-                        ]),
-                    child: Container(
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                          image: const DecorationImage(
-                              image: AssetImage('assets/Mic.jpg'),
-                              fit: BoxFit.cover),
-                          borderRadius: BorderRadius.circular(25.0)),
-                    ),
-                  ),
-                );
-              })
+          // AnimatedBuilder(
+          //     animation: _controller,
+          //     builder: (context, child) {
+          //       final value = _controller.value;
+          //       return Transform.translate(
+          //         offset: Offset(0, 10 * value),
+          //         child: Container(
+          //           width: MediaQuery.of(context).size.width * 0.3,
+          //           height: MediaQuery.of(context).size.height * 0.45,
+          //           padding: EdgeInsets.all(
+          //               MediaQuery.of(context).size.width * 0.01),
+          //           decoration: BoxDecoration(
+          //               borderRadius: BorderRadius.circular(25.0),
+          //               gradient: const LinearGradient(
+          //                   colors: [Colors.pink, Colors.blue]),
+          //               boxShadow: const [
+          //                 BoxShadow(
+          //                     color: Colors.pink,
+          //                     blurRadius: 20,
+          //                     offset: Offset(-2, 0)),
+          //                 BoxShadow(
+          //                     color: Colors.blue,
+          //                     blurRadius: 20,
+          //                     offset: Offset(2, 0))
+          //               ]),
+          //           child: Container(
+          //             alignment: Alignment.center,
+          //             decoration: BoxDecoration(
+          //                 image: const DecorationImage(
+          //                     image: AssetImage('assets/Mic.jpg'),
+          //                     fit: BoxFit.cover),
+          //                 borderRadius: BorderRadius.circular(25.0)),
+          //           ),
+          //         ),
+          //       );
+          //     })
+          GradientBox(
+              containerWidth: 0.3,
+              containerHeight: 0.45,
+              duration: 500,
+              imageName: 'Mic')
         ],
       ),
     );
