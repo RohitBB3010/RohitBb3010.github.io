@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -47,6 +48,7 @@ class _HomeScreenState extends State<HomeScreen>
                 const AutoSizeText(
                   'HELLO !!!',
                   style: TextStyle(
+                      letterSpacing: 2.0,
                       fontFamily: 'Horizon',
                       color: Colors.white,
                       fontSize: 30.0),
@@ -55,8 +57,9 @@ class _HomeScreenState extends State<HomeScreen>
                 const AutoSizeText(
                   'I AM ROHIT BHANDWALKAR',
                   style: TextStyle(
+                      letterSpacing: 2.0,
                       color: Colors.white,
-                      fontSize: 38.0,
+                      fontSize: 36.0,
                       fontFamily: 'Horizon'),
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.03),
@@ -82,7 +85,51 @@ class _HomeScreenState extends State<HomeScreen>
                       color: Color(0xffE59500),
                       fontSize: 20.0,
                       fontFamily: 'Horizon'),
-                )
+                ),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.06),
+                Center(
+                  child: InkWell(
+                    onTap: () {
+                      launchUrl(Uri.parse(
+                          'https://drive.google.com/file/d/1Z86am44XEwJF6zeXfZsWZ4TR_wd5OK0F/view?usp=sharing'));
+                    },
+                    child: Container(
+                      width: MediaQuery.of(context).size.width * 0.1,
+                      height: MediaQuery.of(context).size.height * 0.05,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(25.0),
+                          gradient: const LinearGradient(
+                              colors: [Colors.pinkAccent, Colors.blue]),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Colors.pinkAccent,
+                              blurRadius: 20,
+                              offset: Offset(0, -1),
+                            ),
+                            BoxShadow(
+                                color: Colors.blue,
+                                blurRadius: 20,
+                                offset: Offset(0, 1)),
+                          ]),
+                      child: const Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.download,
+                              color: Colors.white,
+                              size: 18.0,
+                            ),
+                            AutoSizeText(
+                              'Download Resume',
+                              style: TextStyle(
+                                fontSize: 10.0,
+                                color: Colors.white,
+                              ),
+                            )
+                          ]),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
@@ -100,8 +147,8 @@ class _HomeScreenState extends State<HomeScreen>
                         MediaQuery.of(context).size.width * 0.01),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25.0),
-                        gradient:
-                            LinearGradient(colors: [Colors.pink, Colors.blue]),
+                        gradient: const LinearGradient(
+                            colors: [Colors.pink, Colors.blue]),
                         boxShadow: const [
                           BoxShadow(
                               color: Colors.pink,
