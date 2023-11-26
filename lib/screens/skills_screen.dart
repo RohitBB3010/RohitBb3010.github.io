@@ -38,9 +38,9 @@ class _SkillsScreenState extends State<SkillsScreen> {
               String imageName = entry.value;
 
               return Container(
-                padding: const EdgeInsets.all(15.0),
+                padding: const EdgeInsets.all(5.0),
                 width: MediaQuery.of(context).size.width * 0.12,
-                height: MediaQuery.of(context).size.height * 0.08,
+                height: MediaQuery.of(context).size.height * 0.1,
                 decoration: BoxDecoration(
                   border: Border.all(
                     color: Colors.white,
@@ -60,7 +60,7 @@ class _SkillsScreenState extends State<SkillsScreen> {
                       AutoSizeText(
                         skillName,
                         style: const TextStyle(
-                            fontSize: 18.0, color: Colors.white),
+                            fontSize: 20.0, color: Colors.white),
                       )
                     ],
                   ),
