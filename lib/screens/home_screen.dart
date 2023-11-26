@@ -31,13 +31,13 @@ class _HomeScreenState extends State<HomeScreen>
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(
-          horizontal: MediaQuery.of(context).size.width * 0.10,
+          horizontal: MediaQuery.of(context).size.width * 0.05,
           vertical: MediaQuery.of(context).size.height * 0.10),
       //decoration: BoxDecoration(color: Colors.white),
       child: Row(
         children: [
           SizedBox(
-            width: MediaQuery.of(context).size.width * 0.4,
+            width: MediaQuery.of(context).size.width * 0.45,
             height: MediaQuery.of(context).size.height * 0.50,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -59,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen>
                   style: TextStyle(
                       letterSpacing: 2.0,
                       color: Colors.white,
-                      fontSize: 36.0,
+                      fontSize: 40.0,
                       fontFamily: 'Horizon'),
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.03),
@@ -141,8 +141,8 @@ class _HomeScreenState extends State<HomeScreen>
                 return Transform.translate(
                   offset: Offset(0, 10 * value),
                   child: Container(
-                    width: MediaQuery.of(context).size.width * 0.25,
-                    height: MediaQuery.of(context).size.height * 0.4,
+                    width: MediaQuery.of(context).size.width * 0.3,
+                    height: MediaQuery.of(context).size.height * 0.45,
                     padding: EdgeInsets.all(
                         MediaQuery.of(context).size.width * 0.01),
                     decoration: BoxDecoration(
