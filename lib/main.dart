@@ -1,7 +1,7 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/screens/contact_screen.dart';
 import 'package:portfolio/screens/experience_screen.dart';
-import 'package:portfolio/screens/home_screen.dart';
 import 'package:portfolio/screens/home_screen.dart';
 import 'package:portfolio/screens/journal_screen.dart';
 import 'package:portfolio/screens/skills_screen.dart';
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        scaffoldBackgroundColor: Color(0xff001A2C),
+        scaffoldBackgroundColor: const Color(0xff001A2C),
       ),
       home: const MyHomePage(title: 'Flutter App Demo'),
     );
@@ -70,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 tabEntry = 1;
                               });
                             },
-                            child: const Text(
+                            child: const AutoSizeText(
                               'Home',
                               style: TextStyle(
                                   fontFamily: 'scope',
@@ -87,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 tabEntry = 2;
                               });
                             },
-                            child: const Text(
+                            child: const AutoSizeText(
                               'Experience',
                               style: TextStyle(
                                   fontFamily: 'scope',
@@ -104,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 tabEntry = 3;
                               });
                             },
-                            child: const Text(
+                            child: const AutoSizeText(
                               'Skills',
                               style: TextStyle(
                                   fontFamily: 'scope',
@@ -121,7 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 tabEntry = 4;
                               });
                             },
-                            child: const Text(
+                            child: const AutoSizeText(
                               'Journal',
                               style: TextStyle(
                                   fontFamily: 'scope',
@@ -138,7 +138,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 tabEntry = 5;
                               });
                             },
-                            child: const Text(
+                            child: const AutoSizeText(
                               'Contact',
                               style: TextStyle(
                                   fontFamily: 'scope',
