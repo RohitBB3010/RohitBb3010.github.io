@@ -50,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: const Image(image: AssetImage('assets/R.png')),
                   ),
                   Container(
-                    width: MediaQuery.of(context).size.width * 0.3,
+                    width: MediaQuery.of(context).size.width * 0.4,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -69,7 +69,24 @@ class _MyHomePageState extends State<MyHomePage> {
                               style: TextStyle(
                                   fontFamily: 'scope',
                                   color: Colors.white,
-                                  fontSize: 25.0),
+                                  fontSize: 20.0),
+                            )),
+                        TextButton(
+                            style: TextButton.styleFrom(
+                              shape: const StadiumBorder(),
+                              padding: const EdgeInsets.all(20),
+                            ),
+                            onPressed: () {
+                              setState(() {
+                                tabEntry = 1;
+                              });
+                            },
+                            child: const Text(
+                              'Experience',
+                              style: TextStyle(
+                                  fontFamily: 'scope',
+                                  color: Colors.white,
+                                  fontSize: 20.0),
                             )),
                         TextButton(
                             style: TextButton.styleFrom(
@@ -82,11 +99,11 @@ class _MyHomePageState extends State<MyHomePage> {
                               });
                             },
                             child: const Text(
-                              'Home',
+                              'Skills',
                               style: TextStyle(
-                                  fontFamily: 'Scope_One',
+                                  fontFamily: 'scope',
                                   color: Colors.white,
-                                  fontSize: 25.0),
+                                  fontSize: 20.0),
                             )),
                         TextButton(
                             style: TextButton.styleFrom(
@@ -99,11 +116,11 @@ class _MyHomePageState extends State<MyHomePage> {
                               });
                             },
                             child: const Text(
-                              'Home',
+                              'Journal',
                               style: TextStyle(
-                                  fontFamily: 'Scope_One',
+                                  fontFamily: 'scope',
                                   color: Colors.white,
-                                  fontSize: 25.0),
+                                  fontSize: 20.0),
                             )),
                         TextButton(
                             style: TextButton.styleFrom(
@@ -118,23 +135,18 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: const Text(
                               'Contact',
                               style: TextStyle(
-                                  fontFamily: 'Scope_One',
+                                  fontFamily: 'scope',
                                   color: Colors.white,
-                                  fontSize: 25.0),
+                                  fontSize: 20.0),
                             )),
                       ],
                     ),
                   ),
                   Container(
-                    color: Colors.pink,
-                    width: MediaQuery.of(context).size.width * 0.001,
+                    width: MediaQuery.of(context).size.width * 0.05,
                   ),
                 ]),
           ),
-          Container(
-            height: MediaQuery.of(context).size.height * 0.84,
-            color: Colors.amber,
-          )
         ]),
       ),
     );
