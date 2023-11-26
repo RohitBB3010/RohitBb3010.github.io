@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/tabs/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -78,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                             onPressed: () {
                               setState(() {
-                                tabEntry = 1;
+                                tabEntry = 2;
                               });
                             },
                             child: const Text(
@@ -95,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                             onPressed: () {
                               setState(() {
-                                tabEntry = 2;
+                                tabEntry = 3;
                               });
                             },
                             child: const Text(
@@ -112,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                             onPressed: () {
                               setState(() {
-                                tabEntry = 3;
+                                tabEntry = 4;
                               });
                             },
                             child: const Text(
@@ -129,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                             onPressed: () {
                               setState(() {
-                                tabEntry = 4;
+                                tabEntry = 5;
                               });
                             },
                             child: const Text(
@@ -147,6 +148,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ]),
           ),
+          if(tabEntry == 1)
+          const HomeScreen(),
+          if(tabEntry == 2)
         ]),
       ),
     );
