@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/tabs/home_screen.dart';
+import 'package:portfolio/screens/contact_screen.dart';
+import 'package:portfolio/screens/experience_screen.dart';
+import 'package:portfolio/screens/home_screen.dart';
+import 'package:portfolio/screens/home_screen.dart';
+import 'package:portfolio/screens/journal_screen.dart';
+import 'package:portfolio/screens/skills_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -148,9 +153,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ]),
           ),
-          if(tabEntry == 1)
-          const HomeScreen(),
-          if(tabEntry == 2)
+          if (tabEntry == 0 || tabEntry == 1) const HomeScreen(),
+          if (tabEntry == 2) const ExperienceScreen(),
+          if (tabEntry == 3) const SkillsScreen(),
+          if (tabEntry == 4) const JournalScreen(),
+          if (tabEntry == 5) const ContactScreen(),
         ]),
       ),
     );
