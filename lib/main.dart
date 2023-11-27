@@ -34,7 +34,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int tabEntry = 1;
+  int tabEntry = 4;
   late bool isSelected = false;
 
   @override
@@ -147,8 +147,7 @@ class _MyHomePageState extends State<MyHomePage> {
           if (tabEntry == 0 || tabEntry == 1) const HomeScreen(),
           if (tabEntry == 2) const ExperienceScreen(),
           if (tabEntry == 3) const SkillsScreen(),
-          if (tabEntry == 4) const JournalScreen(),
-          if (tabEntry == 5) const ContactScreen(),
+          if (tabEntry == 4) const ContactScreen(),
           Container(
             height: MediaQuery.of(context).size.height * 0.08,
             child: Row(
