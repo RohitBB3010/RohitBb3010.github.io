@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/gradient_box.dart';
@@ -55,14 +56,21 @@ class _HomeScreenState extends State<HomeScreen>
                       fontSize: 30.0),
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.03),
-                const AutoSizeText(
-                  'I AM ROHIT BHANDWALKAR',
-                  style: TextStyle(
-                      letterSpacing: 2.0,
-                      color: Colors.white,
-                      fontSize: 40.0,
-                      fontFamily: 'Horizon'),
-                ),
+                // const AutoSizeText(
+                //   'I AM ROHIT BHANDWALKAR',
+                //   style: TextStyle(
+                //       letterSpacing: 2.0,
+                //       color: Colors.white,
+                //       fontSize: 40.0,
+                //       fontFamily: 'Horizon'),
+                // ),
+                AnimatedTextKit(animatedTexts: [
+                  TypewriterAnimatedText('I AM ROHIT B. BHANDWALKAR',
+                      textStyle: const TextStyle(
+                          fontSize: 30.0,
+                          color: Colors.white,
+                          fontFamily: 'Horizon'))
+                ]),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.03),
                 const AutoSizeText(
                   'Web Developer',
