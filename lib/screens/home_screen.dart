@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/gradient_box.dart';
@@ -46,22 +47,50 @@ class _HomeScreenState extends State<HomeScreen>
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.05,
                 ),
-                const AutoSizeText(
-                  'HELLO !!!',
-                  style: TextStyle(
-                      letterSpacing: 2.0,
-                      fontFamily: 'Horizon',
-                      color: Colors.white,
-                      fontSize: 30.0),
+                const Row(
+                  children: [
+                    AutoSizeText(
+                      'HELLO ',
+                      style: TextStyle(
+                          letterSpacing: 2.0,
+                          fontFamily: 'Horizon',
+                          color: Colors.white,
+                          fontSize: 30.0),
+                    ),
+                    AutoSizeText(
+                      '!!!',
+                      style: TextStyle(
+                          letterSpacing: 2.0,
+                          fontFamily: 'Lato',
+                          color: Colors.white,
+                          fontSize: 30.0),
+                    ),
+                  ],
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.03),
-                const AutoSizeText(
-                  'I AM ROHIT BHANDWALKAR',
-                  style: TextStyle(
-                      letterSpacing: 2.0,
-                      color: Colors.white,
-                      fontSize: 40.0,
-                      fontFamily: 'Horizon'),
+                // const AutoSizeText(
+                //   'I AM ROHIT BHANDWALKAR',
+                //   style: TextStyle(
+                //       letterSpacing: 2.0,
+                //       color: Colors.white,
+                //       fontSize: 40.0,
+                //       fontFamily: 'Horizon'),
+                // ),
+                Row(
+                  children: [
+                    AnimatedTextKit(
+                      animatedTexts: [
+                        TypewriterAnimatedText('I AM ROHIT BHARAT BHANDWALKAR',
+                            textStyle: const TextStyle(
+                                fontSize: 30.0,
+                                color: Colors.white,
+                                fontFamily: 'Horizon')),
+                      ],
+                      repeatForever: true,
+                      displayFullTextOnTap: true,
+                      pause: const Duration(milliseconds: 2000),
+                    ),
+                  ],
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.03),
                 const AutoSizeText(
