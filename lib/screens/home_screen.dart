@@ -65,28 +65,28 @@ class _HomeScreenState extends State<HomeScreen>
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.03),
                 const AutoSizeText(
-                  'Web Developer',
+                  'Passionate tech enthusiast with a flair for creative writing. Specializing in Flutter app development and Firebase exploration, I bring hands-on experience as a web and app developer. A collaborative team player, I\'m excited to contribute to cutting-edge tech projects, bringing innovation to life. Welcome to my portfolio – where passion meets proficiency.',
                   style: TextStyle(
                       color: Color(0xffE59500),
-                      fontSize: 20.0,
-                      fontFamily: 'Horizon'),
+                      fontSize: 18.0,
+                      fontFamily: 'Lato'),
                 ),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-                const AutoSizeText(
-                  'Flutter Developer',
-                  style: TextStyle(
-                      color: Color(0xffE59500),
-                      fontSize: 20.0,
-                      fontFamily: 'Horizon'),
-                ),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-                const AutoSizeText(
-                  'Creative Writer',
-                  style: TextStyle(
-                      color: Color(0xffE59500),
-                      fontSize: 20.0,
-                      fontFamily: 'Horizon'),
-                ),
+                // SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+                // const AutoSizeText(
+                //   'Flutter Developer',
+                //   style: TextStyle(
+                //       color: Color(0xffE59500),
+                //       fontSize: 20.0,
+                //       fontFamily: 'Horizon'),
+                // ),
+                // SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+                // const AutoSizeText(
+                //   'Creative Writer',
+                //   style: TextStyle(
+                //       color: Color(0xffE59500),
+                //       fontSize: 20.0,
+                //       fontFamily: 'Horizon'),
+                // ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.06),
                 Center(
                   child: InkWell(
