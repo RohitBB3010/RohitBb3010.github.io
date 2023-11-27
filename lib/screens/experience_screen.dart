@@ -85,7 +85,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
           boxShadow: const [
             BoxShadow(
                 offset: Offset(-2, 0),
-                blurRadius: 20.0,
+                blurRadius: 20,
                 color: Colors.pinkAccent),
             BoxShadow(
                 offset: Offset(2, 0), blurRadius: 20.0, color: Colors.blue),
