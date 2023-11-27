@@ -40,9 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(
-            horizontal: MediaQuery.of(context).size.width * 0.02,
-            vertical: MediaQuery.of(context).size.height * 0.02),
+        padding: EdgeInsets.fromLTRB(10.0, 0, 10.0, 0),
         child: Column(children: [
           SizedBox(
             width: MediaQuery.of(context).size.width,
@@ -123,23 +121,6 @@ class _MyHomePageState extends State<MyHomePage> {
                               });
                             },
                             child: const AutoSizeText(
-                              'Journal',
-                              style: TextStyle(
-                                  fontFamily: 'scope',
-                                  color: Colors.white,
-                                  fontSize: 20.0),
-                            )),
-                        TextButton(
-                            style: TextButton.styleFrom(
-                              shape: const StadiumBorder(),
-                              padding: const EdgeInsets.all(20),
-                            ),
-                            onPressed: () {
-                              setState(() {
-                                tabEntry = 5;
-                              });
-                            },
-                            child: const AutoSizeText(
                               'Contact',
                               style: TextStyle(
                                   fontFamily: 'scope',
@@ -159,17 +140,14 @@ class _MyHomePageState extends State<MyHomePage> {
           if (tabEntry == 3) const SkillsScreen(),
           if (tabEntry == 4) const JournalScreen(),
           if (tabEntry == 5) const ContactScreen(),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: SizedBox(height: MediaQuery.of(context).size.height * 0.05),
-          ),
-          Align(
-            alignment: Alignment.bottomCenter,
+          Container(
+            height: MediaQuery.of(context).size.height * 0.08,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(10),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
                   child: InkWell(
                     onTap: () {
                       launchUrl(Uri.parse(
@@ -180,7 +158,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 SizedBox(width: MediaQuery.of(context).size.width * 0.05),
                 Padding(
-                  padding: const EdgeInsets.all(10),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
                   child: InkWell(
                     onTap: () {
                       launchUrl(Uri.parse('https://github.com/RohitBB3010'));
@@ -190,7 +169,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 SizedBox(width: MediaQuery.of(context).size.width * 0.05),
                 Padding(
-                  padding: const EdgeInsets.all(10),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
                   child: InkWell(
                     onTap: () {
                       launchUrl(
@@ -201,6 +181,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ],
             ),
+          ),
+          const AutoSizeText(
+            'Developed And Deployed By Rohit B. Bhandwalkar',
+            style: TextStyle(
+                fontFamily: 'Lato',
+                fontSize: 20.0,
+                color: Colors.white,
+                letterSpacing: 1.0),
           )
         ]),
       ),
