@@ -47,13 +47,25 @@ class _HomeScreenState extends State<HomeScreen>
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.05,
                 ),
-                const AutoSizeText(
-                  'HELLO !!!',
-                  style: TextStyle(
-                      letterSpacing: 2.0,
-                      fontFamily: 'Horizon',
-                      color: Colors.white,
-                      fontSize: 30.0),
+                const Row(
+                  children: [
+                    AutoSizeText(
+                      'HELLO ',
+                      style: TextStyle(
+                          letterSpacing: 2.0,
+                          fontFamily: 'Horizon',
+                          color: Colors.white,
+                          fontSize: 30.0),
+                    ),
+                    AutoSizeText(
+                      '!!!',
+                      style: TextStyle(
+                          letterSpacing: 2.0,
+                          fontFamily: 'Lato',
+                          color: Colors.white,
+                          fontSize: 30.0),
+                    ),
+                  ],
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.03),
                 // const AutoSizeText(
@@ -64,13 +76,22 @@ class _HomeScreenState extends State<HomeScreen>
                 //       fontSize: 40.0,
                 //       fontFamily: 'Horizon'),
                 // ),
-                AnimatedTextKit(animatedTexts: [
-                  TypewriterAnimatedText('I AM ROHIT B. BHANDWALKAR',
-                      textStyle: const TextStyle(
-                          fontSize: 30.0,
-                          color: Colors.white,
-                          fontFamily: 'Horizon'))
-                ]),
+                Row(
+                  children: [
+                    AnimatedTextKit(
+                      animatedTexts: [
+                        TypewriterAnimatedText('I AM ROHIT BHARAT BHANDWALKAR',
+                            textStyle: const TextStyle(
+                                fontSize: 30.0,
+                                color: Colors.white,
+                                fontFamily: 'Horizon')),
+                      ],
+                      repeatForever: true,
+                      displayFullTextOnTap: true,
+                      pause: const Duration(milliseconds: 2000),
+                    ),
+                  ],
+                ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.03),
                 const AutoSizeText(
                   'Passionate tech enthusiast with a flair for creative writing. Specializing in Flutter app development and Firebase exploration, I bring hands-on experience as a web and app developer. A collaborative team player, I\'m excited to contribute to cutting-edge tech projects, bringing innovation to life. Welcome to my portfolio – where passion meets proficiency.',
