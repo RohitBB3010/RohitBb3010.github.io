@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class GradientBox extends StatefulWidget {
   GradientBox(
-      {required this.containerWidth,
+      {Key? key,
+      required this.containerWidth,
       required this.containerHeight,
       required this.duration,
       required this.imageName});
@@ -49,8 +50,8 @@ class _GradientBoxState extends State<GradientBox>
                   MediaQuery.of(context).size.height * widget.containerHeight,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25.0),
-                  gradient:
-                      LinearGradient(colors: [Colors.pinkAccent, Colors.blue]),
+                  gradient: const LinearGradient(
+                      colors: [Colors.pinkAccent, Colors.blue]),
                   boxShadow: const [
                     BoxShadow(
                         color: Colors.pinkAccent,

@@ -1,12 +1,10 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:icon_icons/icon_icons.dart';
 import 'package:portfolio/screens/contact_screen.dart';
 import 'package:portfolio/screens/experience_screen.dart';
 import 'package:portfolio/screens/home_screen.dart';
 import 'package:portfolio/screens/journal_screen.dart';
 import 'package:portfolio/screens/skills_screen.dart';
-import 'package:social_media_flutter/widgets/text.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void main() {
@@ -21,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        scaffoldBackgroundColor: const Color(0xff001A2C),
+        scaffoldBackgroundColor: const Color(0xff000c14),
       ),
       home: const MyHomePage(title: 'Flutter App Demo'),
     );
@@ -36,7 +34,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int tabEntry = 0;
+  int tabEntry = 2;
 
   @override
   Widget build(BuildContext context) {
