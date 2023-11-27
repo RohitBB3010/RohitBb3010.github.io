@@ -68,14 +68,6 @@ class _HomeScreenState extends State<HomeScreen>
                   ],
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.03),
-                // const AutoSizeText(
-                //   'I AM ROHIT BHANDWALKAR',
-                //   style: TextStyle(
-                //       letterSpacing: 2.0,
-                //       color: Colors.white,
-                //       fontSize: 40.0,
-                //       fontFamily: 'Horizon'),
-                // ),
                 Row(
                   children: [
                     AnimatedTextKit(
@@ -100,22 +92,6 @@ class _HomeScreenState extends State<HomeScreen>
                       fontSize: 18.0,
                       fontFamily: 'Lato'),
                 ),
-                // SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-                // const AutoSizeText(
-                //   'Flutter Developer',
-                //   style: TextStyle(
-                //       color: Color(0xffE59500),
-                //       fontSize: 20.0,
-                //       fontFamily: 'Horizon'),
-                // ),
-                // SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-                // const AutoSizeText(
-                //   'Creative Writer',
-                //   style: TextStyle(
-                //       color: Color(0xffE59500),
-                //       fontSize: 20.0,
-                //       fontFamily: 'Horizon'),
-                // ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.06),
                 Center(
                   child: InkWell(
@@ -164,42 +140,6 @@ class _HomeScreenState extends State<HomeScreen>
             ),
           ),
           SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-          // AnimatedBuilder(
-          //     animation: _controller,
-          //     builder: (context, child) {
-          //       final value = _controller.value;
-          //       return Transform.translate(
-          //         offset: Offset(0, 10 * value),
-          //         child: Container(
-          //           width: MediaQuery.of(context).size.width * 0.3,
-          //           height: MediaQuery.of(context).size.height * 0.45,
-          //           padding: EdgeInsets.all(
-          //               MediaQuery.of(context).size.width * 0.01),
-          //           decoration: BoxDecoration(
-          //               borderRadius: BorderRadius.circular(25.0),
-          //               gradient: const LinearGradient(
-          //                   colors: [Colors.pink, Colors.blue]),
-          //               boxShadow: const [
-          //                 BoxShadow(
-          //                     color: Colors.pink,
-          //                     blurRadius: 20,
-          //                     offset: Offset(-2, 0)),
-          //                 BoxShadow(
-          //                     color: Colors.blue,
-          //                     blurRadius: 20,
-          //                     offset: Offset(2, 0))
-          //               ]),
-          //           child: Container(
-          //             alignment: Alignment.center,
-          //             decoration: BoxDecoration(
-          //                 image: const DecorationImage(
-          //                     image: AssetImage('assets/Mic.jpg'),
-          //                     fit: BoxFit.cover),
-          //                 borderRadius: BorderRadius.circular(25.0)),
-          //           ),
-          //         ),
-          //       );
-          //     })
           GradientBox(
               containerWidth: 0.3,
               containerHeight: 0.45,

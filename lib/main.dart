@@ -35,6 +35,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int tabEntry = 1;
+  late bool isSelected = false;
 
   @override
   Widget build(BuildContext context) {
@@ -61,8 +62,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       children: [
                         TextButton(
                             style: TextButton.styleFrom(
-                              shape: const StadiumBorder(),
                               padding: const EdgeInsets.all(20),
+                              backgroundColor: tabEntry == 1
+                                  ? const Color(0xffE59500)
+                                  : null,
                             ),
                             onPressed: () {
                               setState(() {
@@ -78,8 +81,10 @@ class _MyHomePageState extends State<MyHomePage> {
                             )),
                         TextButton(
                             style: TextButton.styleFrom(
-                              shape: const StadiumBorder(),
                               padding: const EdgeInsets.all(20),
+                              backgroundColor: tabEntry == 2
+                                  ? const Color(0xffE59500)
+                                  : null,
                             ),
                             onPressed: () {
                               setState(() {
@@ -95,8 +100,10 @@ class _MyHomePageState extends State<MyHomePage> {
                             )),
                         TextButton(
                             style: TextButton.styleFrom(
-                              shape: const StadiumBorder(),
                               padding: const EdgeInsets.all(20),
+                              backgroundColor: tabEntry == 3
+                                  ? const Color(0xffE59500)
+                                  : null,
                             ),
                             onPressed: () {
                               setState(() {
@@ -112,8 +119,10 @@ class _MyHomePageState extends State<MyHomePage> {
                             )),
                         TextButton(
                             style: TextButton.styleFrom(
-                              shape: const StadiumBorder(),
                               padding: const EdgeInsets.all(20),
+                              backgroundColor: tabEntry == 4
+                                  ? const Color(0xffE59500)
+                                  : null,
                             ),
                             onPressed: () {
                               setState(() {
