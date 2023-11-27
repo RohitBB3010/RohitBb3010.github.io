@@ -99,6 +99,9 @@ flutter:
     - family: Horizon-outlined
       fonts:
         - asset: fonts/HorizonOutlinetwo-8K02.otf
+    - family: Lato
+      fonts:
+        - asset: fonts/Lato-Regular.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #

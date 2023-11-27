@@ -42,7 +42,7 @@ class _GradientBoxState extends State<GradientBox>
         builder: (context, child) {
           final value = _controller.value;
           return Transform.translate(
-            offset: Offset(0, 2 * value),
+            offset: Offset(0, 2.6 * value),
             child: Container(
               width: MediaQuery.of(context).size.width * widget.containerWidth,
               padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.01),
