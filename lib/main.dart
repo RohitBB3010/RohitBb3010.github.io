@@ -1,12 +1,11 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:icon_icons/icon_icons.dart';
 import 'package:portfolio/screens/contact_screen.dart';
 import 'package:portfolio/screens/experience_screen.dart';
 import 'package:portfolio/screens/home_screen.dart';
 import 'package:portfolio/screens/journal_screen.dart';
 import 'package:portfolio/screens/skills_screen.dart';
-import 'package:social_media_flutter/widgets/text.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        scaffoldBackgroundColor: const Color(0xff001A2C),
+        scaffoldBackgroundColor: const Color(0xff000c14),
       ),
       home: const MyHomePage(title: 'Flutter App Demo'),
     );
@@ -35,7 +34,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int tabEntry = 0;
+  int tabEntry = 2;
 
   @override
   Widget build(BuildContext context) {
@@ -162,6 +161,10 @@ class _MyHomePageState extends State<MyHomePage> {
           if (tabEntry == 5) const ContactScreen(),
           Align(
             alignment: Alignment.bottomCenter,
+            child: SizedBox(height: MediaQuery.of(context).size.height * 0.05),
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -169,7 +172,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   padding: const EdgeInsets.all(10),
                   child: InkWell(
                     onTap: () {
-                      'https://www.linkedin.com/in/rohit-bhandwalkar-b2708a235/';
+                      launchUrl(Uri.parse(
+                          'https://www.linkedin.com/in/rohit-bhandwalkar-b2708a235/'));
                     },
                     child: Image.asset('assets/linkedin.png'),
                   ),
@@ -179,7 +183,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   padding: const EdgeInsets.all(10),
                   child: InkWell(
                     onTap: () {
-                      'https://github.com/RohitBB3010';
+                      launchUrl(Uri.parse('https://github.com/RohitBB3010'));
                     },
                     child: Image.asset('assets/logo.png'),
                   ),
@@ -189,11 +193,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   padding: const EdgeInsets.all(10),
                   child: InkWell(
                     onTap: () {
-                      'https://www.linkedin.com/in/rohit-bhandwalkar-b2708a235/';
+                      launchUrl(
+                          Uri.parse('https://twitter.com/RohitBhandwalk8'));
                     },
-                    child: Image.asset('assets/instagram.png'),
+                    child: Image.asset('assets/twitter.png'),
                   ),
-                )
+                ),
               ],
             ),
           )
