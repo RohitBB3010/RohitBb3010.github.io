@@ -52,8 +52,7 @@ class _SkillsScreenState extends State<SkillsScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Image(
-                          image: AssetImage('assets/skills/${imageName}.png')),
+                      Image(image: AssetImage('assets/${imageName}.png')),
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.01,
                       ),
