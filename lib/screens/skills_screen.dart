@@ -48,21 +48,19 @@ class _SkillsScreenState extends State<SkillsScreen> {
                   ),
                   borderRadius: BorderRadius.circular(10.0),
                 ),
-                child: Flexible(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Image(image: AssetImage('assets/${imageName}.png')),
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.01,
-                      ),
-                      AutoSizeText(
-                        skillName,
-                        style: const TextStyle(
-                            fontSize: 20.0, color: Colors.white),
-                      )
-                    ],
-                  ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Image(image: AssetImage('assets/${imageName}.png')),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.01,
+                    ),
+                    AutoSizeText(
+                      skillName,
+                      style:
+                          const TextStyle(fontSize: 20.0, color: Colors.white),
+                    )
+                  ],
                 ),
               );
             }).toList()),
