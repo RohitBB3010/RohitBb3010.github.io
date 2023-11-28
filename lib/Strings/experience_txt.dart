@@ -8,7 +8,7 @@ Experience csi = Experience(
     position: 'Public Relations Core',
     tenure: 'April 2022 - March 2023',
     info:
-        'I broadened the committee\'s influence within the college, skillfully managing diverse events. Disseminating information about the committee and recent technological advancements, I ensured the college community stayed informed. This included overseeing multiple events to engage and educate students about our committee\'s initiatives.');
+        'I broadened the committee\'s influence within the college, skillfully managing diverse events. Disseminating information about the committee and recent technological advancements, I ensured the college community stayed informed.');
 
 Experience lit = Experience(
     org: 'Literary Club, VIT',

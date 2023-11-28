@@ -123,7 +123,7 @@ class _ExperienceScreenState extends State<ExperienceScreen> {
               maxLines: 6,
               textAlign: TextAlign.center,
               style: const TextStyle(
-                  fontFamily: 'Lato', fontSize: 13.0, color: Colors.grey),
+                  fontFamily: 'Lato', fontSize: 11.0, color: Colors.grey),
             )
           ],
         ),
