@@ -34,7 +34,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int tabEntry = 4;
+  int tabEntry = 1;
   late bool isSelected = false;
 
   @override
